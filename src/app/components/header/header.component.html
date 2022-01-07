@@ -1,0 +1,88 @@
+<header class="text-gray-600 body-font border-b-2 w-full">
+    <div class="container mx-auto flex flex-wrap p-2 px-8 flex-col md:flex-row items-center">
+        <a routerLink="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="assets/images/logo.jpg" class="w-48 h-16 px-4">
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-sm justify-center">
+            <a class="md:mr-16 hover:text-gray-900">
+                <div class="flex items-center justify-center">
+                    <div class="flex border-2 rounded-xl">
+                        <input type="text" class="px-4 py-2 md:w-80 w-48" placeholder="Search Recepies">
+                        <button class="flex items-center justify-center px-4 border-l bg-yellow-400 rounded-xl">
+                            <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a class="md:mr-5 md:mt-0 mt-4 hover:text-gray-900">Add Blog</a>
+            <a class="md:mr-5 md:mt-0 mt-4 hover:text-gray-900 md:border-l px-6">Upload Video</a>
+            <div class="md:mr-5 md:mt-0 mt-4 relative inline-block bg-gray-100">
+                <button onclick="toggleDD('myDropdown')" class="drop-button border-2 focus:outline-none rounded-lg">
+                    <span class="pr-2"><i class="em em-robot_face"></i></span> English <svg
+                        class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg></button>
+                <div id="myDropdown"
+                    class="dropdownlist absolute right-0 mt-3 p-2 overflow-auto z-30 bg-gray-100 invisible">
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Hindi</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Spanish</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Dutch</div>
+                </div>
+            </div>
+        </nav>
+        <div class="block lg:hidden my-3">
+            <button
+                class="flex items-center px-3 py-2 border rounded text-red-900 border-red-900 hover:text-red-800 hover:border-red-800"
+                onclick="myFunction()">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <nav class="md:ml-auto flex flex-wrap items-center text-sm justify-center hidden lg:block" id="nav">
+            <div class="md:mr-16 mx-2 relative inline-block">
+                <button onclick="toggleDD('myDropdown2')"
+                    class="drop-button focus:outline-none rounded-lg hover:text-red-900 font-bold">
+                    <span class="pr-2"><i class="em em-robot_face"></i></span>CATEGORIES <svg
+                        class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg></button>
+                <div id="myDropdown2"
+                    class="dropdownlist absolute right-0 mt-3 p-2 overflow-auto z-30 bg-gray-100 invisible">
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Home cooked food
+                    </div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Cooked food Vs
+                        Ordered food</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Innovative home
+                        cooking</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Snacks & Beverages
+                    </div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Salads</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Desserts</div>
+                    <hr>
+                    <div class="p-1 hover:bg-gray-3 text-sm no-underline hover:no-underline block">Street Food</div>
+                </div>
+            </div>
+            <a routerLink="/blogs" class="md:mr-16 mx-2 hover:text-red-900 font-bold">BLOGS</a>
+            <a class="md:mr-16 mx-2 hover:text-red-900 font-bold">ABOUT US</a>
+            <a routerLink="/contact-us" class="md:mr-16 mx-2 md:mt-0 my-2 hover:text-red-900 font-bold">CONTACT US</a>
+            <a routerLink="/login" class="md:mr-5 md:ml-5 hover:text-red-900 md:px-3 mx-16">Log In / Register <i
+                    class="fa fa-user-circle-o text-red-900 md:fa-2x fa-lg md:border-l md:px-2 px-2"
+                    aria-hidden="true"></i></a>
+
+        </nav>
+
+    </div>
+</header>
